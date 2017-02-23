@@ -42,7 +42,7 @@ module.exports =
       "(^|\\s)(static\\s+)?((public|private|protected)\\s+)?(static\\s+)?function\\s+{word}\\s*\\("
     ]
     type: ["*.php"]
-    
+
   Hack:
     regex: [
       "(^|\\s)class\\s+{word}(\\s|{|$)"
@@ -74,3 +74,11 @@ module.exports =
       "(^|\\s)package\\s+(\\w+::)*{word}\\s*\\;"
     ]
     type: ["*.pm","*.pl"]
+
+  VHDL:
+    regex: [
+      #{"(^|\\s)(signal|constant|variable)(\\s){word}(\\s):(.*)"}
+      "(^|\\s)(entity|package)(\\s){word}(\\s)is"
+      "(^|\\s)(procedure|function)(\\s){word}(.*)is"
+    ]
+    type: ["*.vhd","*.vhdl"]
