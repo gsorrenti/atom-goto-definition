@@ -75,10 +75,12 @@ module.exports =
     ]
     type: ["*.pm","*.pl"]
 
-  VHDL:
+  Vhdl:
     regex: [
-      #{"(^|\\s)(signal|constant|variable)(\\s){word}(\\s):(.*)"}
-      "(^|\\s)(entity|package)(\\s){word}(\\s)is"
-      "(^|\\s)(procedure|function)(\\s){word}(.*)is"
+      "(^|\\s*){word}(\\s*):(\\s*)(inout|out|in|buffer)(\\s*)"
+      "(^|\\s*){word}(\\s*):(\\s*)"
+      "(^|\\s*)(signal|constant|variable)(\\s*){word}(\\s*):"
+      "(^|\\s*)(entity|package)(\\s*){word}(\\s*)is"
+      "(^|\\s*)(procedure|function)(\\s*){word}(.*)is"
     ]
     type: ["*.vhd","*.vhdl"]
